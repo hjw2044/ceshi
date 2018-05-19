@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+/*公共样式*/
+.safe{
+    height: 100%;
+    background-color: pink;
+    margin: 0 auto;
+}
+.safe::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.left{float: left;}
+.right{float: right;}
+
+
+#box{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    line-height: 100px;
+
+}
+
+@keyframes zoom {
+    from{
+        transform: scale(1)
+
+    }
+    to{
+        transform: scale(0)
+
+    }
+
+
+}
+
+
+
+
+
+body{background: blue}
+
+#box1{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: zoom;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+
+
+
+
+
+#box2{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 20px;
+    animation-name: zoom;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-delay:0.25s;
+    animation-direction:alternate;
+}
+
+
+
+
+#box3{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: zoom;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-delay:0.5s;
+    animation-direction:alternate;
+    transition: all 0.5s;
+}
+
+#box3:hover{transform: translate(0,-30px);}
+
+
+
+
+#on{width: 50px;height: 50px;background-color: pink;}
+
+
+#out{width: 50px;height: 50px;background-color: pink; transition: all 0.5s;}
+
+
+#out:hover{transform: translatey(-30px);}
+
+
+#tm{width: 100px;height: 100px;background-color: #eb9c36;margin: 100px;
+    transition: all 0.5s;
+    animation-name: xuanzhuan;
+    animation-duration: 1s;
+    animation-timing-function: linear;/*匀速播放*/
+    /*animation-delay: 1s;*/  /*动画延迟*/
+    animation-iteration-count: infinite;/*永久播放*/
+    /*animation-direction: alternate;*/  /*轮流播放：即顺时针-逆时针播放*/
+
+
+}
+#tm:hover{
+    /*-webkit-transform: translate(-20px,-50px);*/
+    -webkit-box-shadow: 0 12px 30px rgba(0,0,0,.5);
+    -webkit-transform: rotate(45deg);
+}
+@-webkit-keyframes xuanzhuan{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
